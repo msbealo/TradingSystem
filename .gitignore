@@ -2,3 +2,4 @@ trading_env/
 __pycache__/
 .vscode/
 *.sqlite
+database.py
