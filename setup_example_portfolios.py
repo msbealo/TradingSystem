@@ -25,11 +25,40 @@ db.add_stock(growth_portfolio_id, "NVDA")  # Nvidia for Growth
 db.add_stock(value_portfolio_id, "KO")  # Coca-Cola for Value Investing
 db.add_stock(value_portfolio_id, "JNJ")  # Johnson & Johnson for Value Investing
 
-# ====== Add Strategies ======
+# ====== Add Strategies and Apply to Multiple Portfolios ======
 print("📌 Adding Strategies...")
-db.add_strategy(dca_portfolio_id, "Dollar Cost Averaging", {"interval": "monthly", "investment": 500})
-db.add_strategy(growth_portfolio_id, "Momentum Breakout", {"rsi_threshold": 30, "moving_average": 50})
-db.add_strategy(value_portfolio_id, "Value Investing", {"pe_ratio": 15, "dividend_yield": 4.5})
+
+db.add_strategy(
+    "Dollar Cost Averaging",
+    {
+        "interval": "monthly",
+        "investment": 500
+    },
+    portfolio_ids=[dca_portfolio_id]  # This strategy applies only to DCA portfolio
+)
+
+db.add_strategy(
+    "Momentum Breakout",
+    {
+        "indicators": [
+            {"type": "RSI", "parameters": {"period": 14}, "condition": "<", "value": 30},
+            {"type": "Moving Average", "parameters": {"period": 50}, "condition": "crosses_above", "reference": "Moving Average", "reference_parameters": {"period": 200}}
+        ],
+        "entry_condition": "all",
+        "exit_condition": {"type": "RSI", "parameters": {"period": 14}, "condition": ">", "value": 70},
+        "risk_management": {"stop_loss": 2.0, "take_profit": 5.0, "position_size": 0.05}
+    },
+    portfolio_ids=[growth_portfolio_id, value_portfolio_id]  # Applied to both Growth and Value Investing portfolios
+)
+
+db.add_strategy(
+    "Value Investing",
+    {
+        "pe_ratio": 15,
+        "dividend_yield": 4.5
+    },
+    portfolio_ids=[value_portfolio_id]  # Applied only to the Value Investing portfolio
+)
 
 # ====== Simulate Trades Over Time ======
 print("📌 Logging Trades Over Time...")
@@ -55,12 +84,20 @@ db.add_trade(value_portfolio_id, "KO", "buy", 10, 52, 1.2)  # Buy more at a dip
 db.add_trade(value_portfolio_id, "JNJ", "buy", 8, 160, 1.5)  # Buy J&J at $160
 db.add_trade(value_portfolio_id, "JNJ", "sell", 8, 185, 2.0)  # Sell J&J at $185 (Profitable trade)
 
+# ====== Retrieve & Display Strategies for Each Portfolio ======
+print("\n📌 Strategies Linked to Each Portfolio:")
+for p_id, name in [(dca_portfolio_id, "Dollar-Cost Averaging"), (growth_portfolio_id, "Growth"), (value_portfolio_id, "Value Investing")]:
+    strategies = db.get_portfolio_strategies(p_id)
+    print(f"\n📊 {name} Portfolio Strategies:")
+    for strategy in strategies:
+        print(f"✔ {strategy['name']} → {strategy['parameters']}")
+
 # ====== Final Portfolio Value Calculation ======
-print("📊 Portfolio Values After Trades:")
+print("\n📊 Portfolio Values After Trades:")
 for p_id, name in [(dca_portfolio_id, "Dollar-Cost Averaging"), (growth_portfolio_id, "Growth"), (value_portfolio_id, "Value Investing")]:
     value = db.calculate_portfolio_value(p_id)
     print(f"✔ {name} Portfolio Value: ${value:,.2f}")
 
 # Close database connection
 db.close_connection()
-print("✅ Example Portfolios & Trades Successfully Setup!")
+print("\n✅ Example Portfolios & Trades Successfully Setup!")
