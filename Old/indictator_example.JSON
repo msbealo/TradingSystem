@@ -1,0 +1,44 @@
+
+{
+    "strategy_name": "RSI and MACD Breakout Strategy",
+    "description": "A breakout trading strategy utilizing RSI and MACD to identify and capitalize on asset price breakouts.",
+    "indicators": [
+        {
+            "type": "RSI",
+            "parameters": {
+                "period": 14
+            },
+            "condition": "<",
+            "value": 30
+        },
+        {
+            "type": "MACD",
+            "parameters": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+            },
+            "condition": "crosses_above",
+            "reference": "MACD Signal Line",
+            "reference_parameters": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+            }
+        }
+    ],
+    "entry_condition": "all",
+    "exit_condition": {
+        "type": "RSI",
+        "parameters": {
+            "period": 14
+        },
+        "condition": ">",
+        "value": 70
+    },
+    "risk_management": {
+        "stop_loss": "2.0",
+        "take_profit": "5.0",
+        "position_size": "0.05"
+    }
+}

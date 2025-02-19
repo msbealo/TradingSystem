@@ -84,14 +84,44 @@ def generate_trading_strategy(user_input, chat_history=None):
     }
 
     ⚡ **Available Indicators**:
-    - RSI → `{"period": 14}`
-    - MACD → `{"fast_period": 12, "slow_period": 26, "signal_period": 9}`
-    - Moving Average → `{"period": 50, "type": "SMA"}`  
-    - Bollinger Bands → `{"period": 20, "std_dev": 2}`  
-    - Volume → `{"lookback_period": 10}`
+    - RSI → {"period": 5 to 50, default 14}
+    - MACD → {"fast_period": 5 to 15, "slow_period": 20 to 40, "signal_period": 5 to 15, default 12-26-9}
+    - Moving Average → {"period": 10 to 200, "type": "SMA, EMA, WMA", default 50-SMA}
+    - Bollinger Bands → {"period": 10 to 50, "std_dev": 1 to 3, default 20-2}
+    - Volume → {"lookback_period": 5 to 50, default 10}
+    - Stochastic Oscillator → {"k_period": 5 to 20, "d_period": 3 to 10, "smooth": 3 to 5, default 14-3-3}
+    - Average True Range (ATR) → {"period": 5 to 50, default 14}
+    - Parabolic SAR → {"step": 0.01 to 0.1, "max_step": 0.1 to 0.5, default 0.02-0.2}
+    - ADX (Average Directional Index) → {"period": 5 to 50, default 14}
+    - Ichimoku Cloud → {"tenkan": 5 to 20, "kijun": 20 to 40, "senkou": 40 to 100, default 9-26-52}
+    - SuperTrend → {"atr_period": 5 to 20, "multiplier": 1 to 5, default 10-3}
+    - Fibonacci Retracement → {"levels": 0.236 to 0.786, default [0.236, 0.382, 0.5, 0.618, 0.786]}
+    - Pivot Points → {"method": "standard, fibonacci, camarilla", default standard}
+    - On-Balance Volume (OBV) → {"lookback_period": 5 to 50, default 10}
+    - Chaikin Money Flow (CMF) → {"period": 10 to 50, default 20}
+    - Accumulation/Distribution Line (A/D Line) → {"lookback_period": 5 to 50, default 10}
+    - VWAP (Volume Weighted Average Price) → {"intraday": true, default true}
+    - Williams %R → {"period": 5 to 50, default 14}
+    - Momentum Indicator (MOM) → {"period": 5 to 50, default 10}
+    - Rate of Change (ROC) → {"period": 5 to 50, default 10}
+    - Awesome Oscillator (AO) → {"short_period": 3 to 10, "long_period": 20 to 50, default 5-34}
+    - Keltner Channels → {"period": 10 to 50, "multiplier": 1 to 3, default 20-2}
+    - Donchian Channels → {"lookback_period": 10 to 50, default 20}
+    - Chaikin Volatility Indicator → {"period": 5 to 50, default 10}
+    - Z-Score Indicator → {"lookback_period": 10 to 50, default 20}
+    - Fractal Indicator → {"lookback_period": 3 to 10, default 5}
 
     ⚡ **Conditions**:
-    - `<`, `>`, `"crosses_above"`, `"crosses_below"`, `"within_range"`
+    - <, >, <=, >=
+    - "crosses_above", "crosses_below"
+    - "within_range", "outside_range"
+    - "equal", "not_equal"
+    - "increasing", "decreasing"
+    - "highest_in_period", "lowest_in_period"
+    - "above_moving_average", "below_moving_average"
+    - "touches_upper_band", "touches_lower_band"
+    - "breaks_above_resistance", "breaks_below_support"
+    - "divergence_bullish", "divergence_bearish"
 
     ⚡ **Entry & Exit Conditions**:
     - `"all"` → All indicators must be met (AND logic).

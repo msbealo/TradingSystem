@@ -1,0 +1,24 @@
+{
+    "strategy_name": "Value Momentum Trading Strategy",
+    "description": "This strategy combines value fundamentals with a momentum indicator to identify undervalued stocks gaining upward momentum.",
+    "indicators": [
+        {
+            "type": "Momentum Indicator (MOM)",
+            "parameters": {"period": 10},
+            "condition": "increasing",
+            "value": null
+        }
+    ],
+    "entry_condition": "all",
+    "exit_condition": {
+        "type": "Momentum Indicator (MOM)",
+        "parameters": {"period": 10},
+        "condition": "decreasing",
+        "value": null
+    },
+    "risk_management": {
+        "stop_loss": 2.0,
+        "take_profit": 5.0,
+        "position_size": 0.05
+    }
+}
