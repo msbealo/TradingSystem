@@ -10,7 +10,7 @@ shift         = 4                   # 4-bar left-shift à la Ehlers
 # ------------------------------------------------------------------
 # 1.  Load data (last 12 months)
 # ------------------------------------------------------------------
-df = pd.read_csv('Gold-10years.csv')
+df = pd.read_csv('Gold-10years_250714.csv')
 df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%Y')
 end_date   = df['Date'].max()
 plot_start = end_date - pd.DateOffset(years=1)           # what we SHOW

@@ -26,7 +26,7 @@ from synthetic import make_signal  # for testing, not used in production
 # ---------------------------------------------------------------------------
 # Parameters & I/O
 # ---------------------------------------------------------------------------
-CSV_PATH = Path("Gold-10years.csv")
+CSV_PATH = Path("Gold-10years_250714.csv")
 PLOT_WINDOW_YEARS = 1
 HP_PERIOD_CONV, LP_PERIOD_CONV = 80, 40
 HP_PERIOD_AC, LP_PERIOD_AC = 48, 10
@@ -43,9 +43,9 @@ load_start = plot_start - timedelta(days=MAX_LAG + SHIFT)
 
 # ── parameters ──────────────────────────────────────────────────────────
 synthetic = False                         # turn ON synthetic testing
-n_bars    = 365*2                          # how many bars you want (≈ 1 year)
+n_bars    = 365                          # how many bars you want (≈ 1 year)
                                          # or reuse len(raw_dates) if you like
-periods   = [20]                     # synthetic cycle periods
+periods   = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 70, 80, 90]                     # synthetic cycle periods
 snr_db    = None                           # signal-to-noise ratio (dB) or None
 # -----------------------------------------------------------------------
 

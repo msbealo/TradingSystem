@@ -43,7 +43,7 @@ def make_signal(
     n_bars: int,
     periods: list[int] | None = None,
     *,
-    alpha: float = 1.0,
+    alpha: float = 2,
     random_phases: bool = True,
     snr_db: float | None = None,
     dt: float = 1.0,

@@ -7,7 +7,7 @@ import time
 start = time.time()
 
 # ---------------- Simulation Parameters --------------------------------
-TICKS = 2000             # Number of ticks in the simulation
+TICKS = 300             # Number of ticks in the simulation
 P0 = 100.0              # Initial price
 TICK_SIZE = 0.01        # Price tick size (minimum price movement)
 
