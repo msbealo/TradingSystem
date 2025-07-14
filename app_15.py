@@ -1,10 +1,10 @@
 import streamlit as st
-from database import TradingDatabase
-from data_fetcher import StockDataFetcher
-from chatgpt_api import ChatGPTAPI
-from Strategy_builder import build_strategy_class
-from backtest_engine import BacktsestEngine
-from ftse_fetcher import FTSETickerFetcher
+from System_code.database import TradingDatabase
+from System_code.data_fetcher import StockDataFetcher
+from System_code.chatgpt_api import ChatGPTAPI
+from System_code.Strategy_builder import build_strategy_class
+from System_code.backtest_engine import BacktsestEngine
+from System_code.ftse_fetcher import FTSETickerFetcher
 import datetime
 import json
 import pandas as pd
