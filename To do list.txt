@@ -1,0 +1,6 @@
+To do list
+
+- Improve stock screening AI to include fields available in the fundamental table
+- Include additional indicators from Ehlers
+- Include synthetic market data
+

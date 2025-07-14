@@ -1,0 +1,2168 @@
+{
+    "strategy_name": "SMA Crossover Strategy",
+    "description": "Buys when the 20-day SMA crosses above the 50-day SMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SMA",
+                "parameters": {"period": 20},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SMA",
+                "reference_parameters": {"period": 50}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SMA",
+                "parameters": {"period": 20},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SMA",
+                "reference_parameters": {"period": 50}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "EMA Crossover Strategy",
+    "description": "Buys when the 10-day EMA crosses above the 30-day EMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "EMA",
+                "parameters": {"period": 10},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "EMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "EMA",
+                "parameters": {"period": 10},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "EMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "WMA Crossover Strategy",
+    "description": "Buys when the 15-day WMA crosses above the 30-day WMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "WMA",
+                "parameters": {"period": 15},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "WMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "WMA",
+                "parameters": {"period": 15},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "WMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "DEMA Crossover Strategy",
+    "description": "Buys when the 10-day DEMA crosses above the 20-day DEMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "DEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "DEMA",
+                "reference_parameters": {"period": 20}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "DEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "DEMA",
+                "reference_parameters": {"period": 20}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "TEMA Crossover Strategy",
+    "description": "Buys when the 10-day TEMA crosses above the 20-day TEMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "TEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "TEMA",
+                "reference_parameters": {"period": 20}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "TEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "TEMA",
+                "reference_parameters": {"period": 20}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "SMMA Crossover Strategy",
+    "description": "Buys when the 10-day SMMA crosses above the 30-day SMMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SMMA",
+                "parameters": {"period": 10},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SMMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SMMA",
+                "parameters": {"period": 10},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SMMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "HMA Crossover Strategy",
+    "description": "Buys when price crosses above the HMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "HMA",
+                "parameters": {"period": 50},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "PRICE"
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "HMA",
+                "parameters": {"period": 50},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "PRICE"
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "ZLEMA Crossover Strategy",
+    "description": "Buys when the 10-day ZLEMA crosses above the 30-day ZLEMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ZLEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "ZLEMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ZLEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "ZLEMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": null,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "RSI Strategy",
+    "description": "Buys if RSI < 40 and sells when RSI rises above 60.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "RSI",
+                "parameters": {
+                    "period": 14
+                },
+                "condition": "<",
+                "value": 40
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "RSI",
+                "parameters": {
+                    "period": 14
+                },
+                "condition": ">",
+                "value": 60
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "MACD Crossover Strategy",
+    "description": "Buys when MACD crosses above the signal line and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MACD",
+                "parameters": {
+                    "period_me1": 12,
+                    "period_me2": 26,
+                    "period_signal": 9
+                },
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MACD",
+                "parameters": {
+                    "period_me1": 12,
+                    "period_me2": 26,
+                    "period_signal": 9
+                },
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": null,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Stochastic Crossover Strategy",
+    "description": "Buys when %K crosses above %D and sells when %K crosses below %D.",
+    "entry_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "STOCH",
+                "parameters": {
+                    "period": 14,
+                    "period_dfast": 3,
+                    "period_dslow": 3
+                },
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "STOCH",
+                "parameters": {
+                    "period": 14,
+                    "period_dfast": 3,
+                    "period_dslow": 3
+                },
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Momentum Strategy",
+    "description": "Buys when Momentum > 0 and sells when Momentum turns negative.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MOMENTUM",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 0
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MOMENTUM",
+                "parameters": {"period": 14},
+                "condition": "<",
+                "value": 0
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "ROC Zero Crossover Strategy",
+    "description": "Buys when ROC rises above zero and sells when it drops below zero.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ROC",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 0
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ROC",
+                "parameters": {"period": 14},
+                "condition": "<",
+                "value": 0
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "TRIX Crossover Strategy",
+    "description": "Buys when TRIX crosses above zero and sells when it crosses below zero.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "TRIX",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": 0,
+                "reference": null
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "TRIX",
+                "parameters": {"period": 14},
+                "condition": "cross_below",
+                "value": 0,
+                "reference": null
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "CCI Strategy",
+    "description": "Buys when CCI is below -100 and sells when CCI goes above 100.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "CCI",
+                "parameters": {"period": 14},
+                "condition": "<",
+                "value": -100
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "CCI",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 100
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Ultimate Oscillator Strategy",
+    "description": "Buys when the Ultimate Oscillator is below 40 and sells when it rises above 60.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "UO",
+                "parameters": {"p1": 7, "p2": 14, "p3": 28, "upperband": 70, "lowerband": 30},
+                "condition": "<",
+                "value": 40
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "UO",
+                "parameters": {"p1": 7, "p2": 14, "p3": 28, "upperband": 70, "lowerband": 30},
+                "condition": ">",
+                "value": 60
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Awesome Oscillator Crossover Strategy",
+    "description": "Buys when the Awesome Oscillator crosses above zero and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AO",
+                "parameters": {},
+                "condition": "cross_above",
+                "value": 0,
+                "reference": null
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AO",
+                "parameters": {},
+                "condition": "cross_below",
+                "value": 0,
+                "reference": null
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "PPO Crossover Strategy",
+    "description": "Buys when PPO crosses above its signal line and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "PPO",
+                "parameters": {
+                    "period1": 12,
+                    "period2": 26,
+                    "period_signal": 9
+                },
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "PPO",
+                "parameters": {
+                    "period1": 12,
+                    "period2": 26,
+                    "period_signal": 9
+                },
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "ATR Momentum Strategy",
+    "description": "Buys when ATR is rising and momentum is positive. Sells when momentum turns negative.",
+    "entry_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "ATR",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 0,
+                "reference": null,
+                "reference_parameters": {}
+            },
+            {
+                "type": "MOMENTUM",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 0
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MOMENTUM",
+                "parameters": {"period": 14},
+                "condition": "<",
+                "value": 0
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Bollinger Band Crossover Strategy",
+    "description": "Buys when price crosses above the lower Bollinger Band and sells when it crosses below the upper Bollinger Band.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "BOLLINGER",
+                "parameters": {
+                    "period": 20,
+                    "devfactor": 2
+                },
+                "condition": "cross_above",
+                "value": null,
+                "reference": "LowerBand",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "BOLLINGER",
+                "parameters": {
+                    "period": 20,
+                    "devfactor": 2
+                },
+                "condition": "cross_below",
+                "value": null,
+                "reference": "UpperBand",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "BBANDS Crossover Strategy",
+    "description": "Buys when close crosses above the lower Bollinger Band and sells when it crosses below the upper Bollinger Band.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "BBANDS",
+                "parameters": {
+                    "period": 20,
+                    "devfactor": 2
+                },
+                "condition": "cross_above",
+                "value": null,
+                "reference": "LowerBand",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "BBANDS",
+                "parameters": {
+                    "period": 20,
+                    "devfactor": 2
+                },
+                "condition": "cross_below",
+                "value": null,
+                "reference": "UpperBand",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "ADX Crossover Strategy",
+    "description": "Buys when ADX is above 25 and +DI crosses above -DI. Sells when -DI crosses above +DI.",
+    "entry_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "ADX",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 25
+            },
+            {
+                "type": "PLUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "MINUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MINUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "PLUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "ADXR +DI -DI Crossover Strategy",
+    "description": "Buys when ADXR is above 20 and +DI crosses above -DI. Sells when +DI crosses below -DI.",
+    "entry_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "ADXR",
+                "parameters": {
+                    "period": 14
+                },
+                "condition": ">",
+                "value": 20
+            },
+            {
+                "type": "PLUS_DI",
+                "parameters": {
+                    "period": 14
+                },
+                "condition": "cross_above",
+                "value": null,
+                "reference": "MINUS_DI"
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "PLUS_DI",
+                "parameters": {
+                    "period": 14
+                },
+                "condition": "cross_below",
+                "value": null,
+                "reference": "MINUS_DI"
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "PLUS_DI Crossover Strategy",
+    "description": "Buys when PLUS_DI crosses above MINUS_DI and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "PLUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "MINUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "PLUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "MINUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "MINUS_DI Crossover Strategy",
+    "description": "Buys when MINUS_DI crosses below PLUS_DI and sells when it crosses above.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MINUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "PLUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MINUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "PLUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "SAR Crossover Strategy",
+    "description": "Buys when price crosses above the Parabolic SAR and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SAR",
+                "parameters": {
+                    "af": 0.02,
+                    "afmax": 0.2
+                },
+                "condition": "cross_above",
+                "value": null,
+                "reference": "PRICE",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SAR",
+                "parameters": {
+                    "af": 0.02,
+                    "afmax": 0.2
+                },
+                "condition": "cross_below",
+                "value": null,
+                "reference": "PRICE",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": null,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "Aroon Up Down Crossover Strategy",
+    "description": "Buys when Aroon Up crosses above Aroon Down and sells when Aroon Down crosses above Aroon Up.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AROONUPDOWN",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "AROONDOWN",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AROONUPDOWN",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "AROONUP",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "AROONOSC Crossover Strategy",
+    "description": "Buys when Aroon Oscillator crosses above zero and sells when it crosses below zero.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AROONOSC",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": 0
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AROONOSC",
+                "parameters": {"period": 14},
+                "condition": "cross_below",
+                "value": 0
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Heikin Ashi Trend Strategy",
+    "description": "Buys when Heikin Ashi close is greater than current price and sells when it is lower.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "HEIKINASHI",
+                "parameters": {},
+                "condition": ">",
+                "value": null,
+                "reference": "PRICE",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "HEIKINASHI",
+                "parameters": {},
+                "condition": "<",
+                "value": null,
+                "reference": "PRICE",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "ICHIMOKU Crossover Strategy",
+    "description": "Buys when price crosses above Senkou A and sells when it crosses below Senkou B.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ICHIMOKU",
+                "parameters": {"tenkan": 9, "kijun": 26, "senkou": 52},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SenkouA",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ICHIMOKU",
+                "parameters": {"tenkan": 9, "kijun": 26, "senkou": 52},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SenkouB",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "SMA Crossover Strategy",
+    "description": "Buys when the 20-day SMA crosses above the 50-day SMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SMA",
+                "parameters": {"period": 20},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SMA",
+                "reference_parameters": {"period": 50}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SMA",
+                "parameters": {"period": 20},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SMA",
+                "reference_parameters": {"period": 50}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "EMA Crossover Strategy",
+    "description": "Buys when the 10-day EMA crosses above the 30-day EMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "EMA",
+                "parameters": {"period": 10},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "EMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "EMA",
+                "parameters": {"period": 10},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "EMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "WMA Crossover Strategy",
+    "description": "Buys when the 15-day WMA crosses above the 30-day WMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "WMA",
+                "parameters": {"period": 15},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "WMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "WMA",
+                "parameters": {"period": 15},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "WMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "DEMA Crossover Strategy",
+    "description": "Buys when the 10-day DEMA crosses above the 20-day DEMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "DEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "DEMA",
+                "reference_parameters": {"period": 20}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "DEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "DEMA",
+                "reference_parameters": {"period": 20}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "TEMA Crossover Strategy",
+    "description": "Buys when the 10-day TEMA crosses above the 20-day TEMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "TEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "TEMA",
+                "reference_parameters": {"period": 20}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "TEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "TEMA",
+                "reference_parameters": {"period": 20}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "SMMA Crossover Strategy",
+    "description": "Buys when the 10-day SMMA crosses above the 30-day SMMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SMMA",
+                "parameters": {"period": 10},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SMMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SMMA",
+                "parameters": {"period": 10},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SMMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "HMA Crossover Strategy",
+    "description": "Buys when price crosses above the HMA and sells when price crosses below the HMA.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "HMA",
+                "parameters": {"period": 50},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "PRICE",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "HMA",
+                "parameters": {"period": 50},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "PRICE",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "ZLEMA Crossover Strategy",
+    "description": "Buys when the 10-day ZLEMA crosses above the 30-day ZLEMA and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ZLEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "ZLEMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ZLEMA",
+                "parameters": {"period": 10},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "ZLEMA",
+                "reference_parameters": {"period": 30}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": null,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "RSI Strategy",
+    "description": "Buys when RSI is below 40 and sells when RSI rises above 60.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "RSI",
+                "parameters": {"period": 14},
+                "condition": "<",
+                "value": 40
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "RSI",
+                "parameters": {"period": 14},
+                "condition": ">=",
+                "value": 60
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": null,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "MACD Crossover Strategy",
+    "description": "Buys when MACD crosses above the signal line and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MACD",
+                "parameters": {
+                    "period_me1": 12,
+                    "period_me2": 26,
+                    "period_signal": 9
+                },
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MACD",
+                "parameters": {
+                    "period_me1": 12,
+                    "period_me2": 26,
+                    "period_signal": 9
+                },
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": null,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Stochastic Crossover Strategy",
+    "description": "Buys when %K crosses above %D and sells when %K crosses below %D.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "STOCH",
+                "parameters": {"period": 14, "period_dfast": 3, "period_dslow": 3},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "STOCH",
+                "parameters": {"period": 14, "period_dfast": 3, "period_dslow": 3},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": null,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Momentum Trend Strategy",
+    "description": "Buys when momentum is greater than 0 and sells when it turns negative.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MOMENTUM",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 0
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MOMENTUM",
+                "parameters": {"period": 14},
+                "condition": "<",
+                "value": 0
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "ROC Oscillator Strategy",
+    "description": "Buys when ROC rises above zero and sells when it drops below zero.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ROC",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 0
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ROC",
+                "parameters": {"period": 14},
+                "condition": "<",
+                "value": 0
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": null,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "TRIX Crossover Strategy",
+    "description": "Buys when TRIX crosses above zero and sells when it crosses below zero.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "TRIX",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": 0,
+                "reference": null
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "TRIX",
+                "parameters": {"period": 14},
+                "condition": "cross_below",
+                "value": 0,
+                "reference": null
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "CCI Strategy",
+    "description": "Buys when CCI < -100 and sells when CCI > 100.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "CCI",
+                "parameters": {"period": 14},
+                "condition": "<",
+                "value": -100
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "CCI",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 100
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Ultimate Oscillator Strategy",
+    "description": "Buys when the Ultimate Oscillator is below 40 and sells when it rises above 60.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "UO",
+                "parameters": {
+                    "p1": 7,
+                    "p2": 14,
+                    "p3": 28,
+                    "upperband": 60,
+                    "lowerband": 40
+                },
+                "condition": "<",
+                "value": 40
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "UO",
+                "parameters": {
+                    "p1": 7,
+                    "p2": 14,
+                    "p3": 28,
+                    "upperband": 60,
+                    "lowerband": 40
+                },
+                "condition": ">",
+                "value": 60
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "AO Crossover Strategy",
+    "description": "Buys when Awesome Oscillator crosses above zero and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AO",
+                "parameters": {},
+                "condition": "cross_above",
+                "value": 0,
+                "reference": null
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AO",
+                "parameters": {},
+                "condition": "cross_below",
+                "value": 0,
+                "reference": null
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "PPO Crossover Strategy",
+    "description": "Buys when PPO crosses above its signal line and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "PPO",
+                "parameters": {"period1": 12, "period2": 26, "period_signal": 9},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "PPO",
+                "parameters": {"period1": 12, "period2": 26, "period_signal": 9},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SignalLine",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "ATR Momentum Strategy",
+    "description": "Buys when ATR is rising and momentum is positive. Sells when momentum turns negative.",
+    "entry_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "ATR",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 0,
+                "reference": null,
+                "reference_parameters": {}
+            },
+            {
+                "type": "MOMENTUM",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 0
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MOMENTUM",
+                "parameters": {"period": 14},
+                "condition": "<",
+                "value": 0
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Bollinger Band Strategy",
+    "description": "Buys when the price is below the lower Bollinger Band and sells when it rises above the upper band.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "BOLLINGER",
+                "parameters": {
+                    "period": 20,
+                    "devfactor": 2
+                },
+                "condition": "<",
+                "value": null,
+                "reference": "LowerBand",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "BOLLINGER",
+                "parameters": {
+                    "period": 20,
+                    "devfactor": 2
+                },
+                "condition": ">',
+                "value": null,
+                "reference": "UpperBand",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Bollinger Band Strategy",
+    "description": "Buys when the close price is below the lower Bollinger Band and sells when it rises above the upper Bollinger Band.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "BBANDS",
+                "parameters": {
+                    "period": 20,
+                    "devfactor": 2
+                },
+                "condition": "<",
+                "value": null,
+                "reference": "LowerBand",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "BBANDS",
+                "parameters": {
+                    "period": 20,
+                    "devfactor": 2
+                },
+                "condition": ">",
+                "value": null,
+                "reference": "UpperBand",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": null,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "ADX +DI -DI Crossover Strategy",
+    "description": "Buys when ADX > 25 and +DI crosses above -DI. Sells when -DI crosses above +DI.",
+    "entry_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "ADX",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 25
+            },
+            {
+                "type": "PLUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "MINUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MINUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "PLUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": null,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "ADXR +DI -DI Crossover Strategy",
+    "description": "Buys when ADXR is above 20 and +DI crosses above -DI. Sells when +DI crosses below -DI.",
+    "entry_logic": {
+        "operator": "all",
+        "conditions": [
+            {
+                "type": "ADXR",
+                "parameters": {"period": 14},
+                "condition": ">",
+                "value": 20
+            },
+            {
+                "type": "PLUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "MINUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "PLUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "MINUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "PLUS_DI Crossover Strategy",
+    "description": "Buys when PLUS_DI crosses above MINUS_DI and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "PLUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "MINUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "PLUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "MINUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "MINUS_DI Crossover Strategy",
+    "description": "Buys when MINUS_DI crosses below PLUS_DI and sells when it crosses above.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MINUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "PLUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "MINUS_DI",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "PLUS_DI",
+                "reference_parameters": {"period": 14}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "SAR Crossover Strategy",
+    "description": "Buys when price crosses above the Parabolic SAR and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SAR",
+                "parameters": {"af": 0.02, "afmax": 0.2},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "PRICE",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "SAR",
+                "parameters": {"af": 0.02, "afmax": 0.2},
+                "condition": "cross_below",
+                "value": null,
+                "reference": "PRICE",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 0.9
+    }
+}
+{
+    "strategy_name": "Aroon Up Down Crossover Strategy",
+    "description": "Buys when Aroon Up crosses above Aroon Down and sells when Aroon Down crosses above Aroon Up.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AROONUPDOWN",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "AROONDOWN"
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AROONUPDOWN",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": null,
+                "reference": "AROONUP"
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "AROON Oscillator Crossover Strategy",
+    "description": "Buys when the Aroon Oscillator crosses above zero and sells when it crosses below.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AROONOSC",
+                "parameters": {"period": 14},
+                "condition": "cross_above",
+                "value": 0
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "AROONOSC",
+                "parameters": {"period": 14},
+                "condition": "cross_below",
+                "value": 0
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Heikin Ashi Trade Strategy",
+    "description": "Buys when Heikin Ashi close is greater than the current price and sells when it is lower.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "HEIKINASHI",
+                "parameters": {},
+                "condition": ">",
+                "value": null,
+                "reference": "PRICE"
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "HEIKINASHI",
+                "parameters": {},
+                "condition": "<",
+                "value": null,
+                "reference": "PRICE"
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "strategy_name": "Ichimoku Crossover Strategy",
+    "description": "Buys when price crosses above Senkou A and sells when it crosses below Senkou B.",
+    "entry_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ICHIMOKU",
+                "parameters": {
+                    "tenkan": 9,
+                    "kijun": 26,
+                    "senkou": 52
+                },
+                "condition": "cross_above",
+                "value": null,
+                "reference": "SenkouA",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "exit_logic": {
+        "operator": "any",
+        "conditions": [
+            {
+                "type": "ICHIMOKU",
+                "parameters": {
+                    "tenkan": 9,
+                    "kijun": 26,
+                    "senkou": 52
+                },
+                "condition": "cross_below",
+                "value": null,
+                "reference": "SenkouB",
+                "reference_parameters": {}
+            }
+        ]
+    },
+    "risk_management": {
+        "stop_loss": 5,
+        "take_profit": 100,
+        "position_size": 1.0
+    }
+}
+{
+    "criteria_name": "High Momentum Stocks",
+    "description": "This criteria targets stocks exhibiting strong momentum.",
+    "criteria": {
+        "revenue_growth_yoy": {"min": 15},
+        "pe_ratio": {"max": 25}
+    }
+}

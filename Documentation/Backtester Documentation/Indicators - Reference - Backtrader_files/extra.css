@@ -1,0 +1,56 @@
+.idle-link {
+    pointer-events: none;
+}
+
+.grid-container-2 {
+    /**
+     * https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/
+     * User input values.
+     */
+    --grid-layout-gap: 10px;
+    --grid-column-count: 2;
+    --grid-item--min-width: 240px;
+
+    /**
+     * Calculated values.
+     */
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+    grid-column-gap: var(--grid-layout-gap);
+    grid-row-gap: 0px;
+}
+
+.grid-container-3 {
+    /**
+     * https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/
+     * User input values.
+     */
+    --grid-layout-gap: 10px;
+    --grid-column-count: 3;
+    --grid-item--min-width: 180px;
+
+    /**
+     * Calculated values.
+     */
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+    grid-column-gap: var(--grid-layout-gap);
+    grid-row-gap: 0px;
+}
+
+html {
+    font-size: 16pt;
+}
+
+p {
+    margin-top: 12px;
+    margin-bottom: 3px;
+}
